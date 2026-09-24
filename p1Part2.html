@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ABC College</title>
+</head>
+<style>
+    *{
+        margin: 0px;
+    }
+    
+    body{
+        /* margin: 0 auto; */
+        
+    background-color: white;
+
+    }
+    #hd{
+        width: 100%;
+        
+        background-color: #0B1F3A;
+
+    }
+    #hd h1{
+        color: white;
+    }
+    #hd p{
+       color:  #B8D8F5;
+    }
+    #nav {
+        margin-top: 10px;
+
+        height: 50px;
+    background-color: #1565C0;
+
+        
+       font-size: 20px;
+        
+        /* gap: 20px; */
+        
+    }
+    #nav a{
+        margin-top: 10px;
+        padding: 5px;
+
+        color:  white;
+        display: inline-block;
+        text-decoration: none;
+        margin-right: 30px;
+    /* background-color: #65ccb8; */
+
+
+
+    }
+    a:hover{
+        margin-top: 10px;
+        border-radius: 10px;
+        padding: 5px;
+        border-bottom: 2px solid white;
+        border-color: white;
+        background-color:#42A5F5;
+        opacity: .5;
+    }
+    #form{
+        height: 100vh;
+        width: 100vh;
+        margin-top: 20px;
+        background-color: #0B1F3A;
+        border-radius: 20px;
+        /* text-align: left; */
+        /* align-items: left; */
+        margin-bottom: 50px;
+    }
+    .ibox{
+        height: 50px;
+        width: 70%;
+        font-size: 22PX;
+        border-radius: 16PX;
+        margin-top: 30PX;
+
+    }
+    .ibox2{
+        height: 30px;
+        width: 20%;
+        font-size: 20px;
+        border-radius: 10px;
+        margin-top: 20px;
+        margin-left: 40px;
+        
+    }
+    #abinfo{
+        color: white;
+        text-decoration: none;
+        text-align: left;
+    }
+    #btn{
+        height: 40px;
+        width: 150px;
+        font-size: 20px;
+        background-color:rgb(80, 234, 80);
+        border-radius: 20px;
+
+    }
+    
+    
+</style>
+
+<body>
+
+   <div id="hd">
+    <center>
+        <h1>ABC College of Technology</h1>
+        <p>Knowledge | Innovation | Excellence</p>
+        </center>
+
+        <center>
+        <div id="nav">
+            <a href="index.html">Home</a> 
+            <a href="#">About Us</a>
+            <a href="#">Courses</a> 
+            <a href="p1Part2.html">Admission</a> 
+            <a href="#">Contact Us</a>
+            </center>
+        </div>
+        <hr>
+    </div>
+    <center>
+    <div id="form">
+        <form id="sub">
+            <input type="text" required placeholder=" Full Name" id="Name" class="ibox">
+            <br>
+            <input type="text" required placeholder="Father Name" id="fname"class="ibox">
+            <br>
+            <input type="tel" required placeholder="+91 00000-00000" id="mob" class="ibox">
+            <br>
+            <div id="subin">
+            <input type="number" required placeholder="class 10 %" id ="c10" min="1" max="100" class="ibox2">
+            <input type="number" required placeholder="class 12 %" id ="c12" min="1" max=100 class="ibox2">
+            <select name="courses" id="cou"class="ibox2">
+                <option value="none">None</option>
+                <option value="bca">BCA</option>
+                <option value="b.tech">B.Tech</option>
+                <option value="mca">MCA</option>
+                <option value="M.tech">M.Tech</option>
+                
+            </select>
+            <br>
+            <br>    
+            <button id="btn" onclick="debug_line()">submit</button>
+
+            </div>
+        </form>
+    </div>
+    </center>
+    
+<hr>
+  <br>
+
+    <center>
+        <p>© 2026 ABC College of Technology</p>
+    </center>
+    <script>
+        let name = document.getElementById("Name").value;
+        let fname = document.getElementById("fname").value;
+        let mob = document.getElementById("mob").value;
+        let btn = document.getElementById("btn");
+        btn.addEventListener("click",function(){
+            
+            console.debug("your name is ",name,"\nyour father name is ",fname,"\nyour mobail no. is ",mob)
+        });
+    </script>
+
+</body>
+</html>
