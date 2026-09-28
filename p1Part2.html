@@ -1,173 +1,766 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>ABC College</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ABC College - Admission</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            color: #0B1F3A;
+        }
+
+        /* Header */
+        #hd {
+            background-color: #0B1F3A;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        #hd h1 {
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
+
+        #hd p {
+            color: #B8D8F5;
+            font-size: 17px;
+        }
+
+        /* Navigation */
+        #nav {
+            background-color: #1565C0;
+            text-align: center;
+            padding: 12px;
+        }
+
+        #nav a {
+            color: white;
+            text-decoration: none;
+            display: inline-block;
+            padding: 8px 15px;
+            margin: 3px 10px;
+            border-radius: 5px;
+        }
+
+        #nav a:hover {
+            background-color: #42A5F5;
+        }
+
+        /* Main Heading */
+        .page-title {
+            text-align: center;
+            background-color: #E3F2FD;
+            padding: 35px 10px;
+        }
+
+        .page-title h2 {
+            color: #0B1F3A;
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        .page-title p {
+            color: #1565C0;
+            font-size: 17px;
+        }
+
+        /* Common Section */
+        section {
+            padding: 40px 8%;
+        }
+
+        section h2 {
+            text-align: center;
+            color: #0B1F3A;
+            margin-bottom: 25px;
+        }
+
+        /* Admission Information */
+        .info-container {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .info-box {
+            width: 280px;
+            background-color: #E3F2FD;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 8px #B8D8F5;
+        }
+
+        .info-box h3 {
+            color: #1565C0;
+            margin-bottom: 12px;
+        }
+
+        .info-box p {
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Courses and Fees */
+        #courses {
+            background-color: #F5FAFF;
+        }
+
+        table {
+            width: 90%;
+            margin: auto;
+            border-collapse: collapse;
+            background-color: white;
+        }
+
+        th {
+            background-color: #1565C0;
+            color: white;
+            padding: 15px;
+        }
+
+        td {
+            padding: 14px;
+            text-align: center;
+            border: 1px solid #B8D8F5;
+        }
+
+        tr:nth-child(even) {
+            background-color: #E3F2FD;
+        }
+
+        tr:hover {
+            background-color: #B8D8F5;
+        }
+
+        /* Application Form */
+        .form-container {
+            max-width: 800px;
+            margin: auto;
+            background-color: #E3F2FD;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px #B8D8F5;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 7px;
+            font-weight: bold;
+            color: #0B1F3A;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 11px;
+            border: 1px solid #B8D8F5;
+            border-radius: 5px;
+            font-size: 15px;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border: 2px solid #1565C0;
+        }
+
+        textarea {
+            height: 100px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 13px;
+            background-color: #1565C0;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 17px;
+            cursor: pointer;
+        }
+
+        .submit-btn:hover {
+            background-color: #42A5F5;
+        }
+
+        /* Important Dates */
+        .dates {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .date-box {
+            background-color: white;
+            border-left: 5px solid #1565C0;
+            padding: 15px;
+            margin-bottom: 12px;
+            box-shadow: 0 2px 6px #B8D8F5;
+        }
+
+        .date-box strong {
+            color: #1565C0;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0B1F3A;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        footer p {
+            color: #B8D8F5;
+            margin-top: 8px;
+        }
+
+        /* Mobile */
+        @media (max-width: 700px) {
+
+            #nav a {
+                display: block;
+                margin: 5px;
+            }
+
+            table {
+                width: 100%;
+                font-size: 13px;
+            }
+
+            .form-container {
+                padding: 20px;
+            }
+
+            section {
+                padding: 30px 5%;
+            }
+        }
+    </style>
+
 </head>
-<style>
-    *{
-        margin: 0px;
-    }
-    
-    body{
-        /* margin: 0 auto; */
-        
-    background-color: white;
-
-    }
-    #hd{
-        width: 100%;
-        
-        background-color: #0B1F3A;
-
-    }
-    #hd h1{
-        color: white;
-    }
-    #hd p{
-       color:  #B8D8F5;
-    }
-    #nav {
-        margin-top: 10px;
-
-        height: 50px;
-    background-color: #1565C0;
-
-        
-       font-size: 20px;
-        
-        /* gap: 20px; */
-        
-    }
-    #nav a{
-        margin-top: 10px;
-        padding: 5px;
-
-        color:  white;
-        display: inline-block;
-        text-decoration: none;
-        margin-right: 30px;
-    /* background-color: #65ccb8; */
-
-
-
-    }
-    a:hover{
-        margin-top: 10px;
-        border-radius: 10px;
-        padding: 5px;
-        border-bottom: 2px solid white;
-        border-color: white;
-        background-color:#42A5F5;
-        opacity: .5;
-    }
-    #form{
-        height: 100vh;
-        width: 100vh;
-        margin-top: 20px;
-        background-color: #0B1F3A;
-        border-radius: 20px;
-        /* text-align: left; */
-        /* align-items: left; */
-        margin-bottom: 50px;
-    }
-    .ibox{
-        height: 50px;
-        width: 70%;
-        font-size: 22PX;
-        border-radius: 16PX;
-        margin-top: 30PX;
-
-    }
-    .ibox2{
-        height: 30px;
-        width: 20%;
-        font-size: 20px;
-        border-radius: 10px;
-        margin-top: 20px;
-        margin-left: 40px;
-        
-    }
-    #abinfo{
-        color: white;
-        text-decoration: none;
-        text-align: left;
-    }
-    #btn{
-        height: 40px;
-        width: 150px;
-        font-size: 20px;
-        background-color:rgb(80, 234, 80);
-        border-radius: 20px;
-
-    }
-    
-    
-</style>
 
 <body>
 
-   <div id="hd">
-    <center>
-        <h1>ABC College of Technology</h1>
-        <p>Knowledge | Innovation | Excellence</p>
-        </center>
+    <!-- Header -->
 
-        <center>
-        <div id="nav">
-            <a href="index.html">Home</a> 
-            <a href="#">About Us</a>
-            <a href="#">Courses</a> 
-            <a href="p1Part2.html">Admission</a> 
-            <a href="#">Contact Us</a>
-            </center>
-        </div>
-        <hr>
+    <header id="hd">
+
+        <h1>ABC College of Technology</h1>
+
+        <p>Knowledge | Innovation | Excellence</p>
+
+    </header>
+
+
+    <!-- Navigation -->
+
+    <nav id="nav">
+
+        <a href="index.html">Home</a>
+
+        <a href="index.html#about">About Us</a>
+
+        <a href="index.html#courses">Courses</a>
+
+        <a href="admission.html">Admission</a>
+
+        <a href="#application">Apply Now</a>
+
+        <a href="#contact">Contact</a>
+
+    </nav>
+
+
+    <!-- Page Title -->
+
+    <div class="page-title">
+
+        <h2>Admission 2026-27</h2>
+
+        <p>
+            Start your journey towards a successful career
+            with ABC College of Technology.
+        </p>
+
     </div>
-    <center>
-    <div id="form">
-        <form id="sub">
-            <input type="text" required placeholder=" Full Name" id="Name" class="ibox">
-            <br>
-            <input type="text" required placeholder="Father Name" id="fname"class="ibox">
-            <br>
-            <input type="tel" required placeholder="+91 00000-00000" id="mob" class="ibox">
-            <br>
-            <div id="subin">
-            <input type="number" required placeholder="class 10 %" id ="c10" min="1" max="100" class="ibox2">
-            <input type="number" required placeholder="class 12 %" id ="c12" min="1" max=100 class="ibox2">
-            <select name="courses" id="cou"class="ibox2">
-                <option value="none">None</option>
-                <option value="bca">BCA</option>
-                <option value="b.tech">B.Tech</option>
-                <option value="mca">MCA</option>
-                <option value="M.tech">M.Tech</option>
-                
-            </select>
-            <br>
-            <br>    
-            <button id="btn" onclick="debug_line()">submit</button>
+
+
+    <!-- Admission Information -->
+
+    <section>
+
+        <h2>Admission Information</h2>
+
+        <div class="info-container">
+
+            <div class="info-box">
+
+                <h3> Eligibility</h3>
+
+                <p>
+                    Students must fulfill the minimum educational
+                    qualification required for their selected course.
+                </p>
 
             </div>
-        </form>
-    </div>
-    </center>
-    
-<hr>
-  <br>
 
-    <center>
-        <p>© 2026 ABC College of Technology</p>
-    </center>
-    <script>
-        let name = document.getElementById("Name").value;
-        let fname = document.getElementById("fname").value;
-        let mob = document.getElementById("mob").value;
-        let btn = document.getElementById("btn");
-        btn.addEventListener("click",function(){
-            
-            console.debug("your name is ",name,"\nyour father name is ",fname,"\nyour mobail no. is ",mob)
-        });
-    </script>
+
+            <div class="info-box">
+
+                <h3> Admission Process</h3>
+
+                <p>
+                    Fill out the online application form, submit the
+                    required documents and complete the admission process.
+                </p>
+
+            </div>
+
+
+            <div class="info-box">
+
+                <h3> Required Documents</h3>
+
+                <p>
+                    10th and 12th marksheet, transfer certificate,
+                    photographs, identity proof and other required documents.
+                </p>
+
+            </div>
+
+
+            <div class="info-box">
+
+                <h3> Payment</h3>
+
+                <p>
+                    Course fees can be paid through online payment,
+                    bank transfer or other available payment methods.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Courses and Fees -->
+
+    <section id="courses">
+
+        <h2>Courses & Fee Structure</h2>
+
+        <table>
+
+            <tr>
+                <th>Course</th>
+                <th>Duration</th>
+                <th>Eligibility</th>
+                <th>Annual Fees</th>
+            </tr>
+
+            <tr>
+                <td>BCA</td>
+                <td>3 Years</td>
+                <td>12th Pass</td>
+                <td>₹45,000</td>
+            </tr>
+
+            <tr>
+                <td>MCA</td>
+                <td>2 Years</td>
+                <td>Graduation</td>
+                <td>₹65,000</td>
+            </tr>
+
+            <tr>
+                <td>BBA</td>
+                <td>3 Years</td>
+                <td>12th Pass</td>
+                <td>₹40,000</td>
+            </tr>
+
+            <tr>
+                <td>MBA</td>
+                <td>2 Years</td>
+                <td>Graduation</td>
+                <td>₹75,000</td>
+            </tr>
+
+            <tr>
+                <td>B.Tech</td>
+                <td>4 Years</td>
+                <td>12th Science</td>
+                <td>₹85,000</td>
+            </tr>
+
+            <tr>
+                <td>M.Tech</td>
+                <td>2 Years</td>
+                <td>B.Tech / BE</td>
+                <td>₹90,000</td>
+            </tr>
+
+        </table>
+
+    </section>
+
+
+    <!-- Important Dates -->
+
+    <section>
+
+        <h2>Important Admission Dates</h2>
+
+        <div class="dates">
+
+            <div class="date-box">
+                <strong>Application Start:</strong>
+                01 April 2026
+            </div>
+
+            <div class="date-box">
+                <strong>Last Date to Apply:</strong>
+                30 June 2026
+            </div>
+
+            <div class="date-box">
+                <strong>Document Verification:</strong>
+                05 July 2026 - 15 July 2026
+            </div>
+
+            <div class="date-box">
+                <strong>Session Starts:</strong>
+                01 August 2026
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Application Form -->
+
+    <section id="application">
+
+        <h2>Online Admission Application</h2>
+
+        <div class="form-container">
+
+            <form>
+
+                <div class="form-group">
+
+                    <label for="name">
+                        Student Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Enter your full name"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="father">
+                        Father's Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="father"
+                        name="father"
+                        placeholder="Enter father's name"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="phone">
+                        Mobile Number
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="Enter mobile number"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="dob">
+                        Date of Birth
+                    </label>
+
+                    <input
+                        type="date"
+                        id="dob"
+                        name="dob"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="course">
+                        Select Course
+                    </label>
+
+                    <select id="course" name="course" required>
+
+                        <option value="">
+                            -- Select Course --
+                        </option>
+
+                        <option value="bca">
+                            BCA - ₹45,000 / Year
+                        </option>
+
+                        <option value="mca">
+                            MCA - ₹65,000 / Year
+                        </option>
+
+                        <option value="bba">
+                            BBA - ₹40,000 / Year
+                        </option>
+
+                        <option value="mba">
+                            MBA - ₹75,000 / Year
+                        </option>
+
+                        <option value="btech">
+                            B.Tech - ₹85,000 / Year
+                        </option>
+
+                        <option value="mtech">
+                            M.Tech - ₹90,000 / Year
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="qualification">
+                        Last Qualification
+                    </label>
+
+                    <input
+                        type="text"
+                        id="qualification"
+                        name="qualification"
+                        placeholder="Example: 12th / BCA / B.Tech"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="percentage">
+                        Percentage / CGPA
+                    </label>
+
+                    <input
+                        type="text"
+                        id="percentage"
+                        name="percentage"
+                        placeholder="Enter percentage or CGPA"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="address">
+                        Address
+                    </label>
+
+                    <textarea
+                        id="address"
+                        name="address"
+                        placeholder="Enter your complete address"
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="city">
+                        City
+                    </label>
+
+                    <input
+                        type="text"
+                        id="city"
+                        name="city"
+                        placeholder="Enter your city"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="state">
+                        State
+                    </label>
+
+                    <select id="state" name="state">
+
+                        <option value="">
+                            -- Select State --
+                        </option>
+
+                        <option>Rajasthan</option>
+                        <option>Gujarat</option>
+                        <option>Haryana</option>
+                        <option>Delhi</option>
+                        <option>Maharashtra</option>
+                        <option>Madhya Pradesh</option>
+                        <option>Uttar Pradesh</option>
+                        <option>Punjab</option>
+
+                    </select>
+
+                </div>
+
+
+                <button type="submit" class="submit-btn">
+                    Submit Application
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- Contact -->
+
+    <section id="contact">
+
+        <h2>Admission Contact</h2>
+
+        <div class="info-container">
+
+            <div class="info-box">
+
+                <h3> Phone</h3>
+
+                <p>
+                    +91 98765 43210
+                </p>
+
+            </div>
+
+
+            <div class="info-box">
+
+                <h3> Email</h3>
+
+                <p>
+                    admission@abccollege.edu
+                </p>
+
+            </div>
+
+
+            <div class="info-box">
+
+                <h3> Address</h3>
+
+                <p>
+                    ABC College of Technology,
+                    Knowledge City, Rajasthan
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <h3>ABC College of Technology</h3>
+
+        <p>
+            Knowledge | Innovation | Excellence
+        </p>
+
+        <p>
+            © 2026 ABC College of Technology. All Rights Reserved.
+        </p>
+
+    </footer>
 
 </body>
+
 </html>
