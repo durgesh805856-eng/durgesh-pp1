@@ -1,710 +1,177 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>ABC College of Technology</title>
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            background-color: white;
-            font-family: Arial, sans-serif;
-            color: #0B1F3A;
-        }
-
-        /* Header */
-        #hd {
-            width: 100%;
-            background-color: #0B1F3A;
-            text-align: center;
-            padding: 25px 10px;
-        }
-
-        #hd h1 {
-            color: white;
-            font-size: 35px;
-            margin-bottom: 10px;
-        }
-
-        #hd p {
-            color: #B8D8F5;
-            font-size: 18px;
-        }
-
-        /* Navigation */
-        #nav {
-            margin-top: 20px;
-            min-height: 50px;
-            background-color: #1565C0;
-            font-size: 18px;
-            padding: 5px;
-        }
-
-        #nav a {
-            padding: 10px 15px;
-            color: white;
-            display: inline-block;
-            text-decoration: none;
-            margin-right: 15px;
-            border-radius: 5px;
-        }
-
-        #nav a:hover {
-            border-radius: 10px;
-            border-bottom: 2px solid white;
-            background-color: #42A5F5;
-            opacity: 0.9;
-        }
-
-        /* Hero Section */
-        .hero {
-            background-color: #E3F2FD;
-            text-align: center;
-            padding: 50px 20px;
-        }
-
-        .hero h2 {
-            color: #0B1F3A;
-            font-size: 32px;
-            margin-bottom: 15px;
-        }
-
-        .hero p {
-            color: #1565C0;
-            font-size: 18px;
-            max-width: 800px;
-            margin: auto;
-            line-height: 1.6;
-        }
-
-        .btn {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 12px 25px;
-            background-color: #1565C0;
-            color: white;
-            text-decoration: none;
-            border-radius: 6px;
-        }
-
-        .btn:hover {
-            background-color: #42A5F5;
-        }
-
-        /* Common Section */
-        section {
-            padding: 45px 8%;
-        }
-
-        section h2 {
-            text-align: center;
-            color: #0B1F3A;
-            font-size: 28px;
-            margin-bottom: 30px;
-        }
-
-        /* About */
-        .about {
-            text-align: center;
-            line-height: 1.7;
-            font-size: 17px;
-        }
-
-        /* Cards */
-        .card-container {
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            flex-wrap: wrap;
-        }
-
-        .card {
-            width: 280px;
-            background-color: #E3F2FD;
-            padding: 25px;
-            border-radius: 10px;
-            text-align: center;
-            box-shadow: 0 3px 10px #B8D8F5;
-        }
-
-        .card h3 {
-            color: #1565C0;
-            margin-bottom: 15px;
-        }
-
-        .card p {
-            color: #333;
-            line-height: 1.5;
-        }
-
-        /* Courses */
-        #courses {
-            background-color: #F5FAFF;
-        }
-
-        .course {
-            background-color: white;
-            border-top: 5px solid #1565C0;
-        }
-
-        .course h3 {
-            font-size: 21px;
-        }
-
-        .course p {
-            margin-top: 8px;
-        }
-
-        /* Achievements */
-        .achievement {
-            background-color: #E3F2FD;
-        }
-
-        .achievement h3 {
-            color: #0B1F3A;
-        }
-
-        /* Placement */
-        #placement {
-            background-color: #0B1F3A;
-            color: white;
-        }
-
-        #placement h2 {
-            color: white;
-        }
-
-        .placement-card {
-            background-color: #1565C0;
-            color: white;
-        }
-
-        .placement-card h3 {
-            color: white;
-        }
-
-        .placement-card p {
-            color: #E3F2FD;
-        }
-
-        /* Facilities */
-        .facility {
-            background-color: white;
-            border: 2px solid #B8D8F5;
-        }
-
-        .facility h3 {
-            color: #1565C0;
-        }
-
-        /* Sports */
-        #sports {
-            background-color: #F5FAFF;
-        }
-
-        .sports-card {
-            background-color: #E3F2FD;
-        }
-
-        .sports-card h3 {
-            color: #1565C0;
-        }
-
-        /* Admission */
-        #admission {
-            text-align: center;
-            background-color: #E3F2FD;
-        }
-
-        #admission p {
-            font-size: 18px;
-            line-height: 1.7;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #0B1F3A;
-            color: white;
-            text-align: center;
-            padding: 25px;
-        }
-
-        footer p {
-            margin: 8px;
-            color: #B8D8F5;
-        }
-
-        /* Mobile */
-        @media (max-width: 768px) {
-
-            #hd h1 {
-                font-size: 26px;
-            }
-
-            #nav a {
-                display: block;
-                margin: 5px;
-            }
-
-            .hero h2 {
-                font-size: 25px;
-            }
-
-            .card {
-                width: 100%;
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ABC College of Technology | Knowledge, Innovation, Excellence</title>
+<meta name="description" content="ABC College of Technology offers BCA, MCA, BBA, MBA, B.Tech and M.Tech programs with modern labs, placement support and sports facilities.">
+<meta name="theme-color" content="#101D3A">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+<a class="skip" href="#main">Skip to content</a>
 
-    <!-- Header -->
-    <header id="hd">
+<header class="site-header" id="top">
+  <div class="wrap bar">
+    <a href="#home" class="brand" aria-label="ABC College of Technology, home">
+      <span class="logo" aria-hidden="true">ABC</span>
+      <span class="brand-text"><strong>ABC College of Technology</strong><small>Knowledge | Innovation | Excellence</small></span>
+    </a>
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="menu" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <nav id="menu" class="menu" aria-label="Main">
+      <a href="#home">Home</a><a href="#about">About Us</a><a href="#facilities">Facilities</a><a href="#courses">Courses</a>
+      <a href="#achievements">Achievements</a><a href="#placement">Placement</a><a href="#sports">Sports</a><a href="#contact">Contact Us</a>
+      <a href="#admission" class="btn btn-sm">Apply Now</a>
+    </nav>
+  </div>
+</header>
 
-        <h1>ABC College of Technology</h1>
-
-        <p>Knowledge | Innovation | Excellence</p>
-
-        <!-- Navigation -->
-        <nav id="nav">
-            <a href="#home">Home</a>
-            <a href="#about">About Us</a>
-            <a href="#courses">Courses</a>
-            <a href="#achievements">Achievements</a>
-            <a href="#placement">Placement</a>
-            <a href="#sports">Sports</a>
-            <a href="#admission">Admission</a>
-            <a href="#contact">Contact Us</a>
-        </nav>
-
-    </header>
-
-
-    <!-- Hero Section -->
-    <div class="hero" id="home">
-
-        <h2>Welcome to ABC College of Technology</h2>
-
-        <p>
-            ABC College of Technology is a modern educational institution
-            committed to providing quality education, practical knowledge,
-            innovation and career opportunities to students.
-        </p>
-
-        <a href="#admission" class="btn">Apply Now</a>
-
+<main id="main">
+<section class="hero" id="home">
+  <img class="hero-img" src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1800&q=70" alt="College campus building" fetchpriority="high" onerror="this.remove()">
+  <div class="wrap hero-in">
+    <h1>Learn with purpose. Build what comes next.</h1>
+    <p>ABC College of Technology is a modern institution committed to quality education, practical knowledge, innovation and career opportunities for every student.</p>
+    <div class="actions">
+      <a href="#courses" class="btn btn-light">Explore Programs</a>
+      <a href="#admission" class="btn btn-ghost">Apply for Admission</a>
     </div>
-
-
-    <!-- About College -->
-    <section id="about">
-
-        <h2>About Our College</h2>
-
-        <div class="about">
-
-            <p>
-                ABC College of Technology was established with the vision of
-                creating skilled professionals for the modern world.
-                Our college provides a combination of academic education,
-                practical training, industry exposure and extracurricular
-                activities.
-            </p>
-
-            <br>
-
-            <p>
-                The college has experienced faculty members, modern
-                laboratories, computer labs, library, smart classrooms,
-                sports facilities and placement support.
-            </p>
-
-        </div>
-
-    </section>
-
-
-    <!-- College Facilities -->
-    <section>
-
-        <h2>What We Have in Our College</h2>
-
-        <div class="card-container">
-
-            <div class="card facility">
-                <h3> Library</h3>
-                <p>
-                    A well-equipped library with textbooks, reference books,
-                    journals and digital learning resources.
-                </p>
-            </div>
-
-            <div class="card facility">
-                <h3> Computer Lab</h3>
-                <p>
-                    Modern computer laboratories with internet connectivity
-                    and updated software for practical learning.
-                </p>
-            </div>
-
-            <div class="card facility">
-                <h3> Science Lab</h3>
-                <p>
-                    Well-equipped laboratories for practical experiments
-                    and research activities.
-                </p>
-            </div>
-
-            <div class="card facility">
-                <h3> Smart Classrooms</h3>
-                <p>
-                    Digital classrooms with projectors and modern teaching
-                    technology.
-                </p>
-            </div>
-
-            <div class="card facility">
-                <h3> Transport</h3>
-                <p>
-                    College transportation facility for students from
-                    nearby cities and areas.
-                </p>
-            </div>
-
-            <div class="card facility">
-                <h3> Cafeteria</h3>
-                <p>
-                    Hygienic cafeteria providing refreshments and meals
-                    for students and staff.
-                </p>
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- Courses -->
-    <section id="courses">
-
-        <h2>Courses Offered</h2>
-
-        <div class="card-container">
-
-            <div class="card course">
-                <h3>BCA</h3>
-                <p>
-                    Bachelor of Computer Applications
-                </p>
-                <p>
-                    Focus on programming, databases, web development
-                    and software applications.
-                </p>
-            </div>
-
-            <div class="card course">
-                <h3>MCA</h3>
-                <p>
-                    Master of Computer Applications
-                </p>
-                <p>
-                    Advanced study of software development, AI,
-                    databases and computer applications.
-                </p>
-            </div>
-
-            <div class="card course">
-                <h3>BBA</h3>
-                <p>
-                    Bachelor of Business Administration
-                </p>
-                <p>
-                    Covers management, marketing, finance,
-                    entrepreneurship and business studies.
-                </p>
-            </div>
-
-            <div class="card course">
-                <h3>MBA</h3>
-                <p>
-                    Master of Business Administration
-                </p>
-                <p>
-                    Specializations in marketing, finance, HR,
-                    operations and business management.
-                </p>
-            </div>
-
-            <div class="card course">
-                <h3>B.Tech</h3>
-                <p>
-                    Bachelor of Technology
-                </p>
-                <p>
-                    Engineering education with technical,
-                    practical and industry-oriented learning.
-                </p>
-            </div>
-
-            <div class="card course">
-                <h3>M.Tech</h3>
-                <p>
-                    Master of Technology
-                </p>
-                <p>
-                    Advanced technical education, research and
-                    specialization in engineering fields.
-                </p>
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- Achievements -->
-    <section id="achievements">
-
-        <h2>Our Achievements</h2>
-
-        <div class="card-container">
-
-            <div class="card achievement">
-                <h3> Academic Excellence</h3>
-                <p>
-                    Students have achieved excellent results in university
-                    examinations and academic competitions.
-                </p>
-            </div>
-
-            <div class="card achievement">
-                <h3> Coding Competition</h3>
-                <p>
-                    Our students have participated in coding contests,
-                    hackathons and technology competitions.
-                </p>
-            </div>
-
-            <div class="card achievement">
-                <h3> Innovation</h3>
-                <p>
-                    Students have developed innovative projects and
-                    participated in technology exhibitions.
-                </p>
-            </div>
-
-            <div class="card achievement">
-                <h3> National Events</h3>
-                <p>
-                    Students participate in national-level technical,
-                    cultural and management events.
-                </p>
-            </div>
-
-            <div class="card achievement">
-                <h3> University Toppers</h3>
-                <p>
-                    Several students have secured top positions in
-                    university examinations.
-                </p>
-            </div>
-
-            <div class="card achievement">
-                <h3> Cultural Awards</h3>
-                <p>
-                    Students have won prizes in debates, quizzes,
-                    cultural programs and presentations.
-                </p>
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- Placement -->
-    <section id="placement">
-
-        <h2>Placement & Career</h2>
-
-        <div class="card-container">
-
-            <div class="card placement-card">
-                <h3> Placement Cell</h3>
-                <p>
-                    Dedicated placement team helps students prepare
-                    for recruitment drives and career opportunities.
-                </p>
-            </div>
-
-            <div class="card placement-card">
-                <h3> Placement Training</h3>
-                <p>
-                    Training includes aptitude tests, communication skills,
-                    group discussions and interview preparation.
-                </p>
-            </div>
-
-            <div class="card placement-card">
-                <h3> Industry Visits</h3>
-                <p>
-                    Students get opportunities to understand real-world
-                    business and technology environments.
-                </p>
-            </div>
-
-            <div class="card placement-card">
-                <h3> Recruitment Drives</h3>
-                <p>
-                    The college organizes campus recruitment drives
-                    and connects students with recruiters.
-                </p>
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- Sports -->
-    <section id="sports">
-
-        <h2>Sports & Games</h2>
-
-        <div class="card-container">
-
-            <div class="card sports-card">
-                <h3> Cricket</h3>
-                <p>
-                    Cricket ground and regular inter-college
-                    cricket tournaments.
-                </p>
-            </div>
-
-            <div class="card sports-card">
-                <h3> Football</h3>
-                <p>
-                    Football training and participation in
-                    college-level competitions.
-                </p>
-            </div>
-
-            <div class="card sports-card">
-                <h3> Badminton</h3>
-                <p>
-                    Indoor badminton facilities for students
-                    and college tournaments.
-                </p>
-            </div>
-
-            <div class="card sports-card">
-                <h3> Basketball</h3>
-                <p>
-                    Basketball court and regular practice sessions
-                    for students.
-                </p>
-            </div>
-
-            <div class="card sports-card">
-                <h3> Table Tennis</h3>
-                <p>
-                    Indoor table tennis facility for recreation
-                    and competitions.
-                </p>
-            </div>
-
-            <div class="card sports-card">
-                <h3> Chess</h3>
-                <p>
-                    Chess competitions and indoor recreational
-                    activities for students.
-                </p>
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- Admission -->
-    <section id="admission">
-
-        <h2>Admission</h2>
-
-        <p>
-            Admissions are open for various undergraduate and
-            postgraduate programs.
-        </p>
-
-        <p>
-            Students can contact the admission department for
-            eligibility, fees, documents and admission procedure.
-        </p>
-
-        <a href="add.html" class="btn">Admission Enquiry</a>
-
-    </section>
-
-
-    <!-- Contact -->
-    <section id="contact">
-
-        <h2>Contact Us</h2>
-
-        <div class="card-container">
-
-            <div class="card">
-                <h3> Address</h3>
-                <p>
-                    ABC College of Technology,<br>
-                    Knowledge City, Rajasthan
-                </p>
-            </div>
-
-            <div class="card">
-                <h3> Phone</h3>
-                <p>
-                    +91 98765 43210
-                </p>
-            </div>
-
-            <div class="card">
-                <h3> Email</h3>
-                <p>
-                    info@abccollege.edu
-                </p>
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- Footer -->
-    <footer>
-
-        <h3>ABC College of Technology</h3>
-
-        <p>
-            Knowledge | Innovation | Excellence
-        </p>
-
-        <p>
-            © 2026 ABC College of Technology. All Rights Reserved.
-        </p>
-
-    </footer>
-
+  </div>
+  <div class="wrap">
+    <ul class="highlights">
+      <li><i data-icon="cap"></i><span><strong>6 programs</strong>BCA, MCA, BBA, MBA, B.Tech, M.Tech</span></li>
+      <li><i data-icon="flask"></i><span><strong>Hands-on learning</strong>Modern labs and computer labs</span></li>
+      <li><i data-icon="brief"></i><span><strong>Career support</strong>Training and campus recruitment drives</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="sec" id="about">
+  <div class="wrap about">
+    <div class="about-text reveal">
+      <h2>Skilled professionals for the modern world</h2>
+      <p class="lead">ABC College of Technology was established with the vision of creating skilled professionals for the modern world.</p>
+      <p>Our college combines academic education, practical training, industry exposure and extracurricular activities. Experienced faculty members, modern laboratories, computer labs, a library, smart classrooms, sports facilities and placement support help students grow with confidence.</p>
+    </div>
+    <figure class="about-img reveal">
+      <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=900&q=70" alt="Students celebrating at a college event" loading="lazy" onerror="this.remove()">
+    </figure>
+  </div>
+</section>
+
+<section class="sec tint" id="facilities">
+  <div class="wrap">
+    <div class="head reveal"><h2>What we have in our college</h2><p>Everything students need to learn, practice and feel at home on campus.</p></div>
+    <div class="grid g3" id="facility-grid">
+      <article class="card reveal"><i class="ico" data-icon="book"></i><h3>Library</h3><p>A well-equipped library with textbooks, reference books, journals and digital learning resources.</p></article>
+      <article class="card reveal"><i class="ico" data-icon="monitor"></i><h3>Computer Lab</h3><p>Modern computer laboratories with internet connectivity and updated software for practical learning.</p></article>
+      <article class="card reveal"><i class="ico" data-icon="flask"></i><h3>Science Lab</h3><p>Well-equipped laboratories for practical experiments and research activities.</p></article>
+      <article class="card reveal"><i class="ico" data-icon="proj"></i><h3>Smart Classrooms</h3><p>Digital classrooms with projectors and modern teaching technology.</p></article>
+      <article class="card reveal"><i class="ico" data-icon="bus"></i><h3>Transport</h3><p>College transportation facility for students from nearby cities and areas.</p></article>
+      <article class="card reveal"><i class="ico" data-icon="cup"></i><h3>Cafeteria</h3><p>Hygienic cafeteria providing refreshments and meals for students and staff.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="courses">
+  <div class="wrap">
+    <div class="head reveal"><h2>Courses offered</h2><p>Undergraduate and postgraduate programs in computing, business and engineering.</p></div>
+    <div class="grid g3">
+      <article class="course reveal" data-c="tech"><span class="tag">BCA</span><h3>Bachelor of Computer Applications</h3><p>Focus on programming, databases, web development and software applications.</p><a href="#admission" data-course="BCA">Enquire about BCA</a></article>
+      <article class="course reveal" data-c="tech"><span class="tag">MCA</span><h3>Master of Computer Applications</h3><p>Advanced study of software development, AI, databases and computer applications.</p><a href="#admission" data-course="MCA">Enquire about MCA</a></article>
+      <article class="course reveal" data-c="biz"><span class="tag">BBA</span><h3>Bachelor of Business Administration</h3><p>Covers management, marketing, finance, entrepreneurship and business studies.</p><a href="#admission" data-course="BBA">Enquire about BBA</a></article>
+      <article class="course reveal" data-c="biz"><span class="tag">MBA</span><h3>Master of Business Administration</h3><p>Specializations in marketing, finance, HR, operations and business management.</p><a href="#admission" data-course="MBA">Enquire about MBA</a></article>
+      <article class="course reveal" data-c="eng"><span class="tag">B.Tech</span><h3>Bachelor of Technology</h3><p>Engineering education with technical, practical and industry-oriented learning.</p><a href="#admission" data-course="B.Tech">Enquire about B.Tech</a></article>
+      <article class="course reveal" data-c="eng"><span class="tag">M.Tech</span><h3>Master of Technology</h3><p>Advanced technical education, research and specialization in engineering fields.</p><a href="#admission" data-course="M.Tech">Enquire about M.Tech</a></article>
+    </div>
+  </div>
+</section>
+
+<section class="sec tint" id="achievements">
+  <div class="wrap">
+    <div class="head reveal"><h2>Our achievements</h2><p>Students recognised in academics, technology and culture.</p></div>
+    <div class="grid g3 ach">
+      <article class="reveal"><i class="ico" data-icon="award"></i><h3>Academic Excellence</h3><p>Excellent results in university examinations and academic competitions.</p></article>
+      <article class="reveal"><i class="ico" data-icon="code"></i><h3>Coding Competitions</h3><p>Participation in coding contests, hackathons and technology competitions.</p></article>
+      <article class="reveal"><i class="ico" data-icon="bulb"></i><h3>Innovation</h3><p>Innovative projects developed and shown at technology exhibitions.</p></article>
+      <article class="reveal"><i class="ico" data-icon="flag"></i><h3>National Events</h3><p>Participation in national-level technical, cultural and management events.</p></article>
+      <article class="reveal"><i class="ico" data-icon="trophy"></i><h3>University Toppers</h3><p>Several students have secured top positions in university examinations.</p></article>
+      <article class="reveal"><i class="ico" data-icon="mic"></i><h3>Cultural Awards</h3><p>Prizes in debates, quizzes, cultural programs and presentations.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="sec dark" id="placement">
+  <div class="wrap">
+    <div class="head reveal"><h2>Placement &amp; career</h2><p>From the first aptitude test to the final interview, students get guided support.</p></div>
+    <ol class="steps">
+      <li class="reveal"><i class="ico" data-icon="users"></i><h3>Placement Cell</h3><p>A dedicated team helps students prepare for recruitment drives and career opportunities.</p></li>
+      <li class="reveal"><i class="ico" data-icon="chat"></i><h3>Placement Training</h3><p>Aptitude tests, communication skills, group discussions and interview preparation.</p></li>
+      <li class="reveal"><i class="ico" data-icon="factory"></i><h3>Industry Visits</h3><p>Chances to understand real-world business and technology environments.</p></li>
+      <li class="reveal"><i class="ico" data-icon="brief"></i><h3>Recruitment Drives</h3><p>Campus recruitment drives that connect students with recruiters.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="sec" id="sports">
+  <div class="wrap">
+    <div class="head reveal"><h2>Sports &amp; games</h2><p>Outdoor grounds, indoor courts and tournaments for every kind of player.</p></div>
+    <div class="grid g3 sports">
+      <article class="reveal"><i class="ico" data-icon="ball"></i><div><h3>Cricket</h3><p>Cricket ground and regular inter-college tournaments.</p></div></article>
+      <article class="reveal"><i class="ico" data-icon="ball"></i><div><h3>Football</h3><p>Football training and college-level competitions.</p></div></article>
+      <article class="reveal"><i class="ico" data-icon="bird"></i><div><h3>Badminton</h3><p>Indoor badminton facilities and college tournaments.</p></div></article>
+      <article class="reveal"><i class="ico" data-icon="ball"></i><div><h3>Basketball</h3><p>Basketball court and regular practice sessions.</p></div></article>
+      <article class="reveal"><i class="ico" data-icon="ball"></i><div><h3>Table Tennis</h3><p>Indoor table tennis for recreation and competitions.</p></div></article>
+      <article class="reveal"><i class="ico" data-icon="chess"></i><div><h3>Chess</h3><p>Chess competitions and indoor recreational activities.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="sec adm" id="admission">
+  <div class="wrap adm-grid">
+    <div class="reveal">
+      <h2>Admissions are open</h2>
+      <p class="lead">Admissions are open for various undergraduate and postgraduate programs.</p>
+      <p>Contact the admission department for eligibility, fees, documents and the admission procedure. Send an enquiry and we will get back to you.</p>
+      <p class="note">Demo note: this form runs in your browser only. Nothing is sent to a server until a backend or email service is connected.</p>
+    </div>
+    <form id="enquiry" class="form reveal" novalidate>
+      <div class="field"><label for="name">Full name</label><input id="name" name="name" autocomplete="name" required><span class="err" id="e-name"></span></div>
+      <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required><span class="err" id="e-email"></span></div>
+      <div class="field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required><span class="err" id="e-phone"></span></div>
+      <div class="field"><label for="course">Course</label>
+        <select id="course" name="course" required><option value="">Select a course</option><option>BCA</option><option>MCA</option><option>BBA</option><option>MBA</option><option>B.Tech</option><option>M.Tech</option></select><span class="err" id="e-course"></span></div>
+      <div class="field full"><label for="message">Message</label><textarea id="message" name="message" rows="4"></textarea></div>
+      <button class="btn btn-primary full" type="submit">Enquire Now</button>
+      <div class="status full" id="status" role="status" aria-live="polite"></div>
+    </form>
+  </div>
+</section>
+
+<section class="sec" id="contact">
+  <div class="wrap">
+    <div class="head reveal"><h2>Contact us</h2><p>Reach the college directly by phone or email.</p></div>
+    <div class="grid g3 contact">
+      <article class="reveal"><i class="ico" data-icon="pin"></i><h3>Address</h3><p>ABC College of Technology,<br>Knowledge City, Rajasthan</p></article>
+      <article class="reveal"><i class="ico" data-icon="phone"></i><h3>Phone</h3><p><a href="tel:+919876543210">+91 98765 43210</a></p><button class="copy" data-copy="+91 98765 43210">Copy number</button></article>
+      <article class="reveal"><i class="ico" data-icon="mail"></i><h3>Email</h3><p><a href="mailto:info@abccollege.edu">info@abccollege.edu</a></p><button class="copy" data-copy="info@abccollege.edu">Copy email</button></article>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-grid">
+    <div><a href="#home" class="brand light"><span class="logo" aria-hidden="true">ABC</span><span class="brand-text"><strong>ABC College of Technology</strong><small>Knowledge | Innovation | Excellence</small></span></a></div>
+    <nav aria-label="Explore"><h3>Explore</h3><a href="#about">About Us</a><a href="#facilities">Facilities</a><a href="#courses">Courses</a><a href="#achievements">Achievements</a></nav>
+    <nav aria-label="Students"><h3>Students</h3><a href="#placement">Placement</a><a href="#sports">Sports</a><a href="#admission">Admission</a><a href="#contact">Contact Us</a></nav>
+    <div><h3>Contact</h3><p>Knowledge City, Rajasthan</p><p><a href="tel:+919876543210">+91 98765 43210</a></p><p><a href="mailto:info@abccollege.edu">info@abccollege.edu</a></p></div>
+  </div>
+  <div class="wrap legal">© 2026 ABC College of Technology. All Rights Reserved.</div>
+</footer>
+<script src="script.js"></script>
 </body>
-
 </html>
